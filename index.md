@@ -61,5 +61,5 @@ The project will lay solid fundation for future works. Some clear extensions tha
 
 [4] Wang, Zhangyang, et al. “DeepFont: Identify Your Font from An Image.” Proceedings of the 23rd ACM International Conference on Multimedia - MM ‘15, 2015, doi:10.1145/2733373.2806219.
 
-[5] “3.2.4.3.1. Sklearn.ensemble.RandomForestClassifier¶.” Scikit, scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html.
+[5] sklearn, “3.2.4.3.1. Sklearn.ensemble.RandomForestClassifier.” Scikit, www.scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html.
 
