@@ -28,9 +28,9 @@ Due to the complexity of the task, we will train on 3 distinct typefaces as a pr
 
 ## Anticipated Results
 
-While computer generated images of characters in different typefaces (with noises and minor distortions) are used in the training phase, the final goal is to recognize or distinguish at least 10 typefaces from real-life images of characters taken from scanned documents.
+While computer generated images of characters in different typefaces (with noises and minor distortions) are used in the training phase, the final goal is to recognize or distinguish at least 3 typefaces from real-life images from scanned documents or hand-drawn input.
 
-- After a combination of unsupervised and supervised learning, we expect the program to be able to give predictions of the typefaces of scanned images of charaters.
+- After a combination of unsupervised and supervised learning, we expect the program to be able to give predictions of typefaces of scanned images of charaters.
 
 - The program should also be able to match hand-drawn characters with similar typefaces.
 
@@ -40,13 +40,13 @@ While computer generated images of characters in different typefaces (with noise
 ## Discussion
 ### Impact
 
-The best outcome of this project would be a spin-off app that can recognize selected typefaces accurately from a scanned document. This would help many people who wants to recreate digital versions of scanned documents while the format needs to be preserved. We expect this program to be a crucial component for the future of historic preservation, publication, and even for computer vision.
+The best outcome of this project would be a spin-off app that can recognize selected typefaces accurately from a scanned document or hand-drawn input. This would help many people who wants to recreate digital versions of scanned documents while the format needs to be preserved, or when they want to indentify the hand-drawn characters to the closest matching standard fonts. We expect this program to find its use in publication and design industries.
 
 ### Next Steps
 
 The project will lay solid fundation for future works. Some clear extensions that can be implemented are:
 
-- Expanding to cover more typefaces;
+- Expanding to more typefaces;
 
 - Adapting into plug-ins for exsiting softwares, such as Adobe Acrobat;
 
@@ -55,6 +55,8 @@ The project will lay solid fundation for future works. Some clear extensions tha
 ## References
 [1] Pelli, Denis G., et al. “The Remarkable Inefficiency of Word Recognition.” Nature, vol. 423, no. 6941, 2003, pp. 752–756., doi:10.1038/nature01516.
 
-[2] Yang, Jianchao, et al. Font Recognition and Font Similarity Learning Using a Deep Neural Network. 22 Nov. 2016.
+[2]
 
-[3] Wang, Zhangyang, et al. “DeepFont: Identify Your Font from An Image.” Proceedings of the 23rd ACM International Conference on Multimedia - MM ‘15, 2015, doi:10.1145/2733373.2806219.
+[3] Yang, Jianchao, et al. Font Recognition and Font Similarity Learning Using a Deep Neural Network. 22 Nov. 2016.
+
+[4] Wang, Zhangyang, et al. “DeepFont: Identify Your Font from An Image.” Proceedings of the 23rd ACM International Conference on Multimedia - MM ‘15, 2015, doi:10.1145/2733373.2806219.
