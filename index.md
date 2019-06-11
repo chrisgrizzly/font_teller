@@ -22,7 +22,7 @@ Meanwhile, there are apps that specifically target the font recognitions. For ex
 
 The training sets consist of a number of computer generated images of letters (A to Z) with different typefaces. This enables collecting a large amount of samples efficiently. To mimic the real-life data, which are scanned or drawn letters, degraded letter stimuli is included by adding random Gaussian noises to images [1]. (Note that even though the training sets are software-generated, real-life data will be used to test the performance of the program.)
 
-Both supervised and unsupervised methods are proposed following the guidance of DEEPFONT [3,4]. A convolutional neural network will be used. The unsupervised neural network will be used to derive low-level feature information from an unlabeled data set. The supervised neural network will then use those low-level layers with feature information to classify labeled data into different typefaces.
+Both supervised and unsupervised methods are possibe the guidance of DEEPFONT [2, 3, 4]. A convolutional neural network will be used. The unsupervised neural network will be used to derive low-level feature information from an unlabeled data set. The supervised neural network will then use those low-level layers with feature information to classify labeled data into different typefaces.
 
 Due to the complexity of the task, we will train on 3 distinct typefaces as a proof of concept.
 
