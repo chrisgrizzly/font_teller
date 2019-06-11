@@ -55,7 +55,7 @@ The project will lay solid fundation for future works. Some clear extensions tha
 ## References
 [1] Pelli, Denis G., et al. “The Remarkable Inefficiency of Word Recognition.” Nature, vol. 423, no. 6941, 2003, pp. 752–756., doi:10.1038/nature01516.
 
-[2]
+[2] Schwab, Katharine. “This App Uses Machine Learning To Identify Esoteric Fonts.” Fast Company, Fast Company, 9 July 2018, www.fastcompany.com/90149756/this-app-uses-machine-learning-to-identify-esoteric-fonts.
 
 [3] Yang, Jianchao, et al. Font Recognition and Font Similarity Learning Using a Deep Neural Network. 22 Nov. 2016.
 
