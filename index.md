@@ -22,7 +22,7 @@ Meanwhile, there are apps that specifically target the font recognitions. For ex
 
 The training sets consist of a number of computer generated images of letters (A to Z) with different typefaces. This enables collecting a large amount of samples efficiently. To mimic the real-life data, which are scanned or drawn letters, degraded letter stimuli is included by adding random Gaussian noises to images [1]. (Note that even though the training sets are software-generated, real-life data will be used to test the performance of the program.)
 
-Both supervised and unsupervised methods can be used for this task [2, 3, 4]. This project proposes to compare two methods: convolutional neural network and Random Forest.  The unsupervised neural network will be used to derive low-level feature information from an unlabeled data set. The supervised neural network will then use those low-level layers with feature information to classify labeled data into different typefaces.
+Both supervised and unsupervised methods can be used for this task [2, 3, 4]. This project proposes to compare two methods: convolutional neural network (CNN) and Random Forest.  Since CNN takes long time for training, we will be using an esiting pre-trained CNN model. For random forest alogithm, we will be using SKlearn libray in Python [5]. The unsupervised neural network will be used to derive low-level feature information from an unlabeled data set. The supervised neural network will then use those low-level layers with feature information to classify labeled data into different typefaces.
 
 Due to the complexity of the task, we will train on 3 distinct typefaces as a proof of concept.
 
@@ -60,3 +60,6 @@ The project will lay solid fundation for future works. Some clear extensions tha
 [3] Yang, Jianchao, et al. Font Recognition and Font Similarity Learning Using a Deep Neural Network. 22 Nov. 2016.
 
 [4] Wang, Zhangyang, et al. “DeepFont: Identify Your Font from An Image.” Proceedings of the 23rd ACM International Conference on Multimedia - MM ‘15, 2015, doi:10.1145/2733373.2806219.
+
+[5] “3.2.4.3.1. Sklearn.ensemble.RandomForestClassifier¶.” Scikit, scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html.
+
