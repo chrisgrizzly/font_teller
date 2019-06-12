@@ -9,26 +9,26 @@ header:
 ---
 {% include feature_row %}
 
-_**The style of texts also carries imformation.**_
+_**The style of texts also carries information.**_
 
 ## Project Introduction
-OCR (optical character recognition) technology that converts images and scanned documents into texts is mature with a high accuracy. It is also widely accessible to the public being embedded in software such as Adobe Acrobat. For such scanned document to text conversion, it is shown that recognizing individual letters rather than the whole words is more efficient [1]. However, letters can have different fonts and that information is not generally preserved during the recognition process, meaning users need to reformat the whole document from scratch. This is inconvenient and can possibly introduce human errors in editing. Thus, we propose to combine supervised and unsupervised machine learning to recognize and distinguish typefaces of characters in scanned documents.
+OCR (optical character recognition) technology that converts images and scanned documents into texts is mature with a high accuracy. It is also widely accessible to the public being embedded in software such as Adobe Acrobat. For such scanned document to text conversion, it is shown that recognizing individual letters rather than the whole words is more efficient [1]. However, letters can have different fonts and that information is not generally preserved during the recognition process, meaning users need to reformat the whole document from scratch. This is inconvenient and can possibly introduce human errors in editing. Thus, we propose to use supervised machine learning to recognize and distinguish typefaces of characters in scanned documents.
 	
 Meanwhile, there are apps that specifically target the font recognitions. For example, the app WhatTheFont uses deep learning algorithms trained on 33 million images to recognize 100 thousand fonts [2]. However, the app is tailored towards scanned documents, and for cases where we test with hand-drawn characters, the app returns similar handwritten fonts (thanks to its large collection) instead of similar standard publication fonts that are ready for production. In this sense, the large collection actually hinders people's ability to fast-prototype using pen and paper. To empower artists, designers and editors, we are also proposing to use our trained program for matching the hand-drawn characters with standard fonts.
 
 ## Proposed Method
 
-<img src="assets/images/method_diagram_2.png" alt="hi" class="inline"/>
+<img src="assets/images/method_diagram_3.png" alt="hi" class="inline"/>
 
-The training sets consist of a number of computer generated images of letters (A to Z) with different typefaces. This enables collecting a large amount of samples efficiently. To mimic the real-life data, which are scanned or drawn letters, degraded letter stimuli is included by adding random Gaussian noises to images [1]. (Note that even though the training sets are software-generated, real-life data will be used to test the performance of the program.)
+The training sets consist of a number of computer-generated images of letters (A to Z) with different typefaces. This enables collecting a large number of samples efficiently. To mimic the real-life data, which are scanned or drawn letters, degraded letter stimuli is included by adding random Gaussian noises to images [1]. (Note that even though the training sets are software-generated, real-life data will be used to test the performance of the program.)
 
-Both supervised and unsupervised methods can be used for this task [2, 3, 4]. This project proposes to compare two supervised machine learning methods: convolutional neural network (CNN) and Random Forest.  Since CNN takes long time for training, we will be using an existing pre-trained CNN model. For random forest alogithm [5], the degreded letter stumili is used as training data. Due to the complexity of the task, we will train on 3 distinct typefaces as a proof of concept. Hand-written letter are used for testing both the methods. Their performance in classifing into different typefaces is then compared. 
+Supervised machine learning with random forest method will be used for this task [2, 3, 4]. This project proposes to compare two supervised machine learning methods: convolutional neural network (CNN) and Random Forest.  Since CNN takes long time for training, we will be using an existing pre-trained CNN model. For random forest algorithm [5], the degraded letter stimuli are used as training data. Due to the complexity of the task, we will train on 3 distinct typefaces as a proof of concept. Hand-written and scanned letters will be used for testing both the methods. Their performance in classifying into different typefaces is then compared. 
 
 ## Anticipated Results
 
 - The final goal is to recognize and distinguish at least 3 typefaces.
 
-- We expect the program to be able to give predictions of typefaces of scanned images of charaters.
+- We expect the program to be able to give predictions of typefaces of scanned images of characters.
 
 - The program should also be able to match hand-drawn characters with similar typefaces.
 
@@ -38,15 +38,15 @@ Both supervised and unsupervised methods can be used for this task [2, 3, 4]. Th
 ## Discussion
 ### Impact
 
-The best outcome of this project would be a spin-off app that can recognize selected typefaces accurately from a scanned document or hand-drawn characters. This would help many people who wants to recreate digital versions of scanned documents while the format needs to be preserved, or when they want to indentify the hand-drawn characters to the closest matching standard fonts. We expect this program to find its use in publication and design industries.
+The best outcome of this project would be a spin-off app that can recognize selected typefaces accurately from a scanned document or hand-drawn characters. This would help many people who wants to recreate digital versions of scanned documents while the format needs to be preserved, or when they want to identify the hand-drawn characters to the closest matching standard fonts. We expect this program to find its use in publication and design industries.
 
 ### Next Steps
 
-The project will lay solid fundation for future works. Some clear extensions that can be implemented are:
+The project will lay solid foundation for future works. Some clear extensions that can be implemented are:
 
 - Expanding to more typefaces;
 
-- Adapting into plug-ins for exsiting softwares, such as Adobe Acrobat;
+- Adapting into plug-ins for existing softwares, such as Adobe Acrobat;
 
 - Adding detections of other aspects of fonts, such as color, size, highlight, bold, italic, and underscore. 
 
