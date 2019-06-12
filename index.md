@@ -5,7 +5,7 @@ share: true
 comments: true
 permalink: /
 header:
-  image: /assets/images/Banner_v2.4.png
+  image: /assets/images/Banner_v2.5.png
 ---
 {% include feature_row %}
 
