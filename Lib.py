@@ -1,20 +1,27 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Jun  1 09:55:39 2019
+Created on Sat July  1 09:55:39 2019
 
 @author: venkatesh avula
 """
+import math
+import random
+from PIL import ImageFont, ImageDraw, Image, ImageFilter
+import numpy as np
+import keras
+from keras.preprocessing import image
+import os
 
 
 #Constants---------------------------------------------------
 Fonts = ["Times", "Arial", "Verdana","comic", "Tahoma", "Calibri","Lsans","CALIFR","Rock","ShowG","BRITANIC","BROADW","BRUSHSCI"] #file names : *.ttf fonts
-#Fonts = ['Times', "Arial", "Verdana","comic", "Tahoma", "Calibri","Lsans","MTCORSVA","CALIFR","Rock","ShowG"] #file names : *.ttf fonts
 FontsFolder= 'c:/Windows/Fonts/'
 ImgSize=32
 StddevMax=20#max noise level
 FontSize=25 #font size in the image
-
-
+dirName='Data/'
+            
+             
 characters = ["a","b","c","d","e","f","g","h","i","k",
            "l","m","n","o","p","q","r","s","t","u",
            "v","w","x","y","z", 
@@ -23,12 +30,7 @@ characters = ["a","b","c","d","e","f","g","h","i","k",
            "L","M", "N", "O","P", "Q", "R", "S", "T", "U",
            "V", "W", "X", "Y","Z"]
 nch=len(characters)-1
-import math
-import random
-from PIL import ImageFont, ImageDraw, Image, ImageFilter
-import numpy as np
-import keras
-from keras.preprocessing import image
+
 
 def add_noise(x, mean, stddev):
     return min(max(0, x+random.normalvariate(mean,stddev)), 255)
@@ -93,7 +95,7 @@ def MakeDataset_CNN(N):
         fonttype=math.floor(i/nIndivualFont)
         img=ImgSave(fonttype,i)
 
-        img =image.load_img('Data/'+str(i)+'.png', color_mode='grayscale',target_size=(ImgSize,ImgSize,1), grayscale=False)  #image.load_img('Data/'+str(i)+'.png', target_size=(ImgSize,ImgSize,1), grayscale=True)
+        img =image.load_img(dirName+str(i)+'.png', color_mode='grayscale',target_size=(ImgSize,ImgSize,1), grayscale=False)  #image.load_img('Data/'+str(i)+'.png', target_size=(ImgSize,ImgSize,1), grayscale=True)
         img = image.img_to_array(img)
         img = img/255
         train_image.append(img)    
@@ -101,9 +103,6 @@ def MakeDataset_CNN(N):
         
     X = np.array(train_image)     
     return X,y   
-
-
-
 
 
 
@@ -155,6 +154,10 @@ def ImgSave(fonttype,i):
 
     #noisy font
     img=add_noise_img(img,mean,stddev)
+    if not os.path.exists(dirName):
+        os.mkdir(dirName)
+        print("Directory " , dirName ,  " Created ")
+    
     img.save('Data/'+str(i)+'.png')
         
     return img

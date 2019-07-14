@@ -29,7 +29,7 @@ from keras.utils import plot_model
 
 from tqdm import tqdm
 #inputs---------------------------------------------------
-N=1000
+N=10000
 
 ##train---------------------------------------------------
 #build dataset
@@ -94,7 +94,7 @@ plt.ylabel('Accuracy')
 plt.xlabel('Epoch')
 plt.legend(['Train', 'Test'], loc='lower right')
 plt.grid(color='grey', linestyle='--', linewidth=1)
-plt.show()
+plt.savefig('model_Accuracy.png', bbox_inches='tight')
 
 # Plot training & validation loss values
 plt.plot(history.history['loss'])
@@ -104,14 +104,6 @@ plt.ylabel('Loss')
 plt.xlabel('Epoch')
 plt.legend(['Train', 'Test'], loc='upper right')
 plt.grid(color='grey', linestyle='--', linewidth=1)
-plt.show()
+plt.savefig('model_Loss.png', bbox_inches='tight')
 
-
-plot_model(model, to_file='model3.png',show_shapes=True, show_layer_names=True)
-
-
-
-
-
-
-
+plot_model(model, to_file='mode_CNN.png',show_shapes=True, show_layer_names=True)
